@@ -26,14 +26,20 @@ MODELS = os.path.join(BASE_DIR, 'aisentimentsanalyzer/models')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-p&4yt(8!_d3uryx)ii%ir4tcn@v_53yx2_oc6&vdj+=#me12o-'
-SECRET_KEY = os.environ.get(
+
+# SECRET_KEY = os.environ.get(
+#     'DJANGO_SECRET_KEY', 'django-insecure-p&4yt(8!_d3uryx)ii%ir4tcn@v_53yx2_oc6&vdj+=#me12o-')
+
+DJANGO_SECRET_KEY = os.environ.get(
     'DJANGO_SECRET_KEY', 'django-insecure-p&4yt(8!_d3uryx)ii%ir4tcn@v_53yx2_oc6&vdj+=#me12o-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+DJANGO_DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+ALLOWED_HOSTS = ['https://swahilisentiments.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
