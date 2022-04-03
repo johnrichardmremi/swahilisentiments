@@ -12,7 +12,7 @@ class AisentimentsanalyzerConfig(AppConfig):
     # This attribute defines which application the configuration applies to.
     # It must be set in all AppConfig subclasses.
 
-    path = os.path.join(settings.MODELS, 'model.p')
+    path = os.path.join(settings.MODELS, 'tweets_laki_na_ushee_model.p')
 
     # load models into separate variables
     # this will be accessible via this class
