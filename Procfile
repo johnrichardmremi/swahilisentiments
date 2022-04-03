@@ -1,1 +1,1 @@
-web: gunicorn swahilisentiments.wsgi --log-file -
+web: gunicorn swahilisentiments.wsgi --log-file - 
