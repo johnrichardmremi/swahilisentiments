@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+from distutils.debug import DEBUG
 import dj_database_url
 from pathlib import Path
 import os
@@ -38,6 +39,10 @@ DJANGO_SECRET_KEY = os.environ.get(
 # DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 DJANGO_DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+SECRET_KEY = DJANGO_SECRET_KEY
+
+DEBUG = DJANGO_DEBUG
 
 ALLOWED_HOSTS = ['https://swahilisentiments.herokuapp.com/', '127.0.0.1']
 
